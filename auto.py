@@ -69,7 +69,6 @@ def shipModel(pos_x, pos_y, course_angle, speed):
     veh = np.array([pos_x, pos_y, course_angle, speed])    # pos_x, pos_y, heading (rad), speed (m/s)
     h = vehShape(stParam, veh)
 
-    # Add virtual LiDAR
     lidar_angles = np.linspace(-np.pi/2, np.pi/2, 36)
     lidar_range = 50
     lidar_pos_x = pos_x - stParam['veh_info']['L'] * np.sin(course_angle)
